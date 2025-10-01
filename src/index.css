@@ -1,0 +1,111 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+img {
+  height: 100px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(110, 192, 255);
+}
+
+.card {
+  width: 50vh;
+  height: 30vh;
+  background-color: rgb(253, 245, 233);
+  border-radius: 15px;
+  box-shadow: 3px 4px #888888;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: rgb(253, 245, 233);
+  border-radius: 15px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.options-container {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.option {
+  width: 11vh;
+  max-height: 4.5vh;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: #f8f8fd;
+  padding: 0.3em 1.5em;
+  border-radius: 10em;
+  border: 3px solid #656677;
+  box-shadow: 0px 7px #404047;
+}
+
+.option:hover {
+  background-color: #d4d4d4;
+}
+
+.option:active {
+  position: relative;
+  top: 8px;
+  border: 3px solif #41414d;
+  box-shadow: 0px 0px;
+}
+
+.control-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px
+}
+
+.control-buttons button {
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  background-color: #214dde;
+  border: 1px solid #17369d;
+  color: white;
+}
+
+.control-buttons button:hover {
+  background-color: #1d3fae;
+}
+
+.control-buttons button:active {
+  background-color: #132e86;
+  border: 4px solid #2b2b7a;
+}
